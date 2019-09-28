@@ -25,11 +25,11 @@ co4 = ${xrdb:color4:#222}
 co5 = ${xrdb:color5:#222}
 co6 = ${xrdb:color6:#222}
 co7 = ${xrdb:color7:#222}
-;background = ${xrdb:color0:#222}
-background = #222
+background = ${xrdb:color0:#222}
+;background = #222
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = ${xrdb:color7:#222}
+;foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -45,8 +45,8 @@ height = 27
 radius = 0
 fixed-center = true
 
-;background = ${colors.co0}
-background = #D5060119
+background = ${colors.co0}
+;background = #D5060119
 foreground = ${colors.co7}
 
 line-size = 3
@@ -104,10 +104,10 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.co3}
+format-prefix-underline = ${colors.co6}
 
 label-layout =  %layout%
-label-layout-underline = ${colors.co3}
+label-layout-underline = ${colors.co6}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -164,9 +164,9 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-foreground = ${colors.co3}
-label-focused-background = #D5060119
-label-focused-underline = ${colors.co3}
+label-focused-foreground = ${colors.co0}
+label-focused-background = ${colors.co7}
+label-focused-underline = ${colors.co7}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
@@ -176,13 +176,15 @@ label-unfocused-underline = ${colors.co0}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
+label-visible-foreground = ${colors.co0}
+label-visible-background = ${colors.co3}
+label-visible-underline = ${colors.co3}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-background = ${colors.co1}
+label-urgent-foreground = ${colors.co0}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
@@ -230,7 +232,7 @@ type = internal/cpu
 interval = 2
 format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.co3}
+format-underline = ${colors.co6}
 label = %percentage:2%%
 
 [module/memory]
@@ -238,7 +240,7 @@ type = internal/memory
 interval = 2
 format-prefix = "MEM: "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.co3}
+format-underline = ${colors.co6}
 label = %percentage_used%%
 
 [module/wlan]
@@ -247,7 +249,7 @@ interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${colors.co3}
+format-connected-underline = ${colors.co6}
 label-connected = %essid%
 
 format-disconnected =
@@ -268,7 +270,7 @@ type = internal/network
 interface = eno1
 interval = 3.0
 
-format-connected-underline = ${colors.co3}
+format-connected-underline = ${colors.co6}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -289,7 +291,7 @@ time = %H.%M.%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-#format-underline = ${colors.co3}
+#format-underline = ${colors.co6}
 format-underline =
 
 label = %date%  %time%
@@ -356,7 +358,7 @@ adapter = ADP1
 full-at = 100
 
 format-charging =  <label-charging>
-format-charging-underline = ${colors.co3}
+format-charging-underline = ${colors.co6}
 
 format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -404,7 +406,7 @@ ramp-foreground = ${colors.foreground-alt}
 [module/light]
 type = custom/script
 
-module-underline= ${colors.co3}
+module-underline= ${colors.co6}
 exec = brightnessctl | grep -o "[[:alnum:]]*%"
 tail = true
 

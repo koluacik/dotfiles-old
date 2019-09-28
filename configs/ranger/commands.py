@@ -78,11 +78,11 @@ class fzf_select_file(Command):
         if self.quantifier:
             # match only directories
             command="find -L . \( -path '*/\.*' ! -path '*/\.config' ! -path '*/\.config/*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e"
+            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e --color"
         else:
             # match files and directories
             command="find -L . \( -path '*/\.*' ! -path '*/\.config' ! -path '*/\.config/*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e"
+            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e --color"
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -106,11 +106,11 @@ class fzf_select_dir(Command):
         if self.quantifier:
             # match only directories
             command="find -L . \( -path '*/\.*' ! -path '*/\.config' ! -path '*/\.config/*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e"
+            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e --color "
         else:
             # match files and directories
             command="find -L . \( -path '*/\.*' ! -path '*/\.config' ! -path '*/\.config/*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e"
+            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m -e --color "
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:
@@ -133,9 +133,9 @@ class fzf_locate(Command):
     def execute(self):
         import subprocess
         if self.quantifier:
-            command="locate home media | fzf -e -i"
+            command="locate home media | fzf -e -i --color "
         else:
-            command="locate home media | fzf -e -i"
+            command="locate home media | fzf -e -i --color "
         fzf = self.fm.execute_command(command, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()
         if fzf.returncode == 0:

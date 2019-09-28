@@ -211,8 +211,9 @@ bindsym $mod+Shift+o resize grow width 50 px or 50 ppt
 #}
 
 workspace_auto_back_and_forth yes #press win 2 to go to workspace 2, pressing it again to go back.
-exec_always --no-startup-id feh --bg-scale '/home/deniz/Documents/Pictures/Wallpapers/mywp.jpg' &
-#exec_always --no-startup-id feh --bg-scale '/home/deniz/Documents/Pictures/Wallpapers/mywp.png
+#exec_always --no-startup-id feh --bg-scale '/home/deniz/Documents/Pictures/Wallpapers/mywp.jpg' &
+exec_always --no-startup-id feh --bg-scale '/home/deniz/Documents/Pictures/Wallpapers/mywp.jpg'
+#exec_always --no-startup-id qiv -z '/home/deniz/Documents/Pictures/Wallpapers/mywp.png'
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
@@ -243,7 +244,7 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 
 #right now colors are 1
 # class                 border  backgr. text    ind	 child_border
-client.focused          $co3	$co3	$co3	$co3	$co3
+client.focused          $co3	$co3	$co3	$co3	$co8
 client.focused_inactive $co0	$co0	$co0	$co0	$co0
 client.unfocused        $co0	$co0	$co0	$co0	$co0
 client.urgent           $co1	$co1	$co1	$co1	$co1
@@ -273,8 +274,8 @@ bindsym $mod+q exec --no-startup-id qutebrowser &
 bindsym $mod+r exec urxvt -e ranger &
 
 #screenshot
-bindsym $mod+m exec ~/.scripts/getshot.sh
-bindsym $mod+Shift+m exec ~/.scripts/setshot.sh
+bindsym $mod+m exec ~/dotfiles/scripts/getshot.sh
+bindsym $mod+Shift+m exec ~/dotfiles/scripts/setshot.sh
 #screenshot copy to clipboard
 #bindsym $mod+Shift+m exec --no-startup-id maim -s | xclip -selection clipboard -t image/png &
 #bindsym $mod+m exec --no-startup-id maim | xclip -selection clipboard -t image/png &

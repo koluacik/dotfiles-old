@@ -27,7 +27,8 @@ case $s_area in
 
 case $s_action in
 	save)
-		save="~/Documents/Pictures/screenshots/$(date +%Y%m%d-%H%M%S).png"
+		save='~/Documents/Pictures/screenshots/$(date +%Y%m%d-%H%M%S).png'
+		#save="~/Documents/Pictures/screenshots/ff.png"
 		;;
 	clipboard)
 		save="| xclip -selection clipboard -t image/png"
@@ -37,7 +38,7 @@ case $s_action in
 final="$mycommand $save"
 
 #avoid overriding the existing command with an empty one if you press ESC.
-if [ $mycommand=="" ] || [ $save=="" ]
+if [[ $mycommand == ""  ||  $save == "" ]]
 then
 	exit
 else

@@ -98,6 +98,7 @@ set smartcase
 call plug#begin('~/.vim/plugged/')
 
 Plug 'powerline/powerline'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
