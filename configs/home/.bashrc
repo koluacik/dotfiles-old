@@ -18,6 +18,14 @@ alias lockandhib='killall compton & i3lock -f -u -r 10 -s 5 & systemctl hibernat
 alias fixmyscreen='(sudo systemctl restart bumblebeed & wait) && intel-virtual-output && arandr'
 alias strtmyscreen='intel-virtual-output && ~/Documents/miscconfs/xstuff/screen.sh && i3-msg restart && sleep 2 && i3-msg rename workspace 1 to 10 && i3-msg rename workspace 2 to 1'
 
+#aliases to make my life easier
+alias _nvim='vim ~/dotfiles/configs/nvim/init.vim'
+alias _qute='vim ~/dotfiles/configs/qutebrowser/config.py'
+alias _cdrang='cd ~/dotfiles/configs/ranger/'
+alias _vim='vim ~/dotfiles/configs/home/.vimrc'
+alias _cdc='cd ~/.config'
+alias _cdd='cd ~/dotfiles'
+
 alias bton='echo -e "power on" | bluetoothctl'
 alias btjbl='echo -e "connect 04:FE:A1:22:95:97" | bluetoothctl'
 alias btjbloff='echo -e "disconnect" | bluetoothctl'
