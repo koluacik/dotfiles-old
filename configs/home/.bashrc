@@ -10,7 +10,8 @@ alias ls='ls --color=auto'
 #export PS1="\[\033[38;5;11m\][\u@\h\[$(tput sgr0)\]\[\033[38;5;15m\] \w\[$(tput sgr0)\]\[\033[38;5;11m\]]\\$\[$(tput sgr0)\] "
 export PS1="\[\033[38;5;11m\]\u\\[\033[38;5;15m\] \W\\[\033[38;5;11m\] \\$\[$(tput sgr0)\] "
 export PS2="\033[38;5;11m> \033[00m\]"
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 
 alias vim='nvim'
 
