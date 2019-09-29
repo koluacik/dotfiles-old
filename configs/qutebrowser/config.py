@@ -143,6 +143,8 @@ config.bind('<Ctrl-Shift-D>', 'open qute://bookmarks')
 
 c.content.headers.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
 
+##https://colourco.de/freebuild/292d3e-444267-32374d-676e95-8796b0-959dcb-959dcb-ffffff
+##https://colourco.de/freebuild/f07178-f78c6c-ffcb6b-c3e88d-89ddff-82aaff-c792ea-ff5370
 ##base16 theme here,
 base00 = "#292D3E"
 base01 = "#444267"
@@ -165,16 +167,16 @@ base0F = "#FF5370"
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
-c.colors.completion.fg = base05
+c.colors.completion.fg = base0A
 
 # Background color of the completion widget for odd rows.
-c.colors.completion.odd.bg = base03
+c.colors.completion.odd.bg = base01
 
 # Background color of the completion widget for even rows.
 c.colors.completion.even.bg = base00
 
 # Foreground color of completion widget category headers.
-c.colors.completion.category.fg = base0A
+c.colors.completion.category.fg = base0B
 
 # Background color of the completion widget category headers.
 c.colors.completion.category.bg = base00
@@ -216,16 +218,16 @@ c.colors.downloads.bar.bg = base00
 c.colors.downloads.start.fg = base00
 
 # Color gradient start for download backgrounds.
-c.colors.downloads.start.bg = base0D
+c.colors.downloads.start.bg = base0A
 
 # Color gradient end for download text.
 c.colors.downloads.stop.fg = base00
 
 # Color gradient stop for download backgrounds.
-c.colors.downloads.stop.bg = base0C
+c.colors.downloads.stop.bg = base0B
 
 # Foreground color for downloads with errors.
-c.colors.downloads.error.fg = base08
+c.colors.downloads.error.fg = base00
 
 # Font color for hints.
 c.colors.hints.fg = base00
@@ -372,7 +374,7 @@ c.colors.tabs.indicator.error = base08
 c.colors.tabs.odd.fg = base05
 
 # Background color of unselected odd tabs.
-c.colors.tabs.odd.bg = base03
+c.colors.tabs.odd.bg = base00
 
 # Foreground color of unselected even tabs.
 c.colors.tabs.even.fg = base05
@@ -381,16 +383,16 @@ c.colors.tabs.even.fg = base05
 c.colors.tabs.even.bg = base00
 
 # Background color of pinned unselected even tabs.
-c.colors.tabs.pinned.even.bg = base0C
+c.colors.tabs.pinned.even.bg = base00
 
 # Foreground color of pinned unselected even tabs.
-c.colors.tabs.pinned.even.fg = base07
+c.colors.tabs.pinned.even.fg = base05
 
 # Background color of pinned unselected odd tabs.
-c.colors.tabs.pinned.odd.bg = base0B
+c.colors.tabs.pinned.odd.bg = base00
 
 # Foreground color of pinned unselected odd tabs.
-c.colors.tabs.pinned.odd.fg = base07
+c.colors.tabs.pinned.odd.fg = base05
 
 # Background color of pinned selected even tabs.
 c.colors.tabs.pinned.selected.even.bg = base05
@@ -402,7 +404,7 @@ c.colors.tabs.pinned.selected.even.fg = base00
 c.colors.tabs.pinned.selected.odd.bg = base05
 
 # Foreground color of pinned selected odd tabs.
-c.colors.tabs.pinned.selected.odd.fg = base0E
+c.colors.tabs.pinned.selected.odd.fg = base00
 
 # Foreground color of selected odd tabs.
 c.colors.tabs.selected.odd.fg = base00

@@ -26,6 +26,7 @@ alias _cdrang='cd ~/dotfiles/configs/ranger/'
 alias _vim='vim ~/dotfiles/configs/home/.vimrc'
 alias _cdc='cd ~/.config'
 alias _cdd='cd ~/dotfiles'
+alias _date='date +%Y+%M+d'
 
 alias bton='echo -e "power on" | bluetoothctl'
 alias btjbl='echo -e "connect 04:FE:A1:22:95:97" | bluetoothctl'
