@@ -254,7 +254,7 @@ client.background       #ffffff
 # PROTIP: You can also dynamically set dmenu's colors this way:
 #bindsym $mod+d exec dmenu_run -b -nb "$co4" -nf "$co0" -sb "$co7" -sf "$co0" -fn "liberation sans:pixelsize=15"
 bindsym $mod+d exec rofi -show run -location 2 -width 100 -lines 5 -line-margin 1 -line-padding 1 -font "liberation sans:pixelsize 12" -yoffset 27 &
-bindsym $mod+Shift+d exec cat /home/deniz/.scripts/tmux.txt | rofi -dmenu -location 2 -width 100 -lines 43 -line-margin 1 -line-padding 1 -font "liberation sans:pixelsize 12" -yoffset 27 &
+bindsym $mod+Shift+d exec cat /home/deniz/dotfiles/scripts/tmux.txt | rofi -dmenu -location 2 -width 100 -lines 43 -line-margin 1 -line-padding 1 -font "liberation sans:pixelsize 12" -yoffset 27 &
 bindsym $mod+Control+d exec networkmanager_dmenu &
 
 

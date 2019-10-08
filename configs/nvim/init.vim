@@ -52,6 +52,9 @@ command Newterm split +terminal
 "\\yy etc.
 map <leader><leader> "+
 
+"ctrl \ ctrl n is a hassle
+tnoremap <Esc> <C-\><C-n>
+
 ":e $MYVIMRC is a hassle
 command Evimrc edit $MYVIMRC
 
