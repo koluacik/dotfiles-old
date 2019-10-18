@@ -50,12 +50,19 @@ command Newterm split +terminal
 
 "default <leader> key is \. use these to copy to or paste from the clipboard.
 "\\yy etc.
-map <leader><leader> "+
+noremap <leader><leader> "+
+
+"latex
+"\lb to build a latex file. (uses CoC and its tex extension)
+noremap <leader>ll :CocCommand latex.Build <CR>
+"\lz to display the already built pdf file in zathura
+noremap <leader>lz :! zathura %:r.pdf & <CR>
 
 "ctrl \ ctrl n is a hassle
 tnoremap <Esc> <C-\><C-n>
 
 ":e $MYVIMRC is a hassle
 command Evimrc edit $MYVIMRC
+
 
 "that's all folks!
