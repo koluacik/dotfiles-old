@@ -49,14 +49,20 @@ au TermOpen * startinsert|setlocal nonumber norelativenumber signcolumn=no
 command Newterm split +terminal
 
 "default <leader> key is \. use these to copy to or paste from the clipboard.
-"\\yy etc.
+"use \\ to yank from or to the system clipboard, \\yy etc.
 noremap <leader><leader> "+
+
+"yank the file to the clipboard
+noremap <leader>yy :%y+<CR>
 
 "latex
 "\lb to build a latex file. (uses CoC and its tex extension)
 noremap <leader>ll :CocCommand latex.Build <CR>
 "\lz to display the already built pdf file in zathura
-noremap <leader>lz :! zathura %:r.pdf & <CR>
+noremap <silent><leader>lz :! zathura %:r.pdf & <CR>
+
+"no highlighting
+noremap <silent><leader>] :noh <CR>
 
 "ctrl \ ctrl n is a hassle
 tnoremap <Esc> <C-\><C-n>
