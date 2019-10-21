@@ -141,6 +141,10 @@ config.bind(',dP', 'set downloads.location.directory /home/deniz/Documents/Pictu
 config.bind(',dpm', 'set downloads.location.directory /home/deniz/Documents/Pictures/memes')
 config.bind('<Ctrl-Shift-D>', 'open qute://bookmarks')
 
+#proxy
+config.bind('\po', 'set content.proxy socks://localhost:9090')
+config.bind('\pp', 'set content.proxy system')
+
 c.content.headers.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
 
 ##https://colourco.de/freebuild/292d3e-444267-32374d-676e95-8796b0-959dcb-959dcb-ffffff
