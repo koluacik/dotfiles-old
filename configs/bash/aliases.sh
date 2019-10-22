@@ -24,3 +24,6 @@ alias ls='ls --color=auto'
 alias vim='nvim'
 
 alias lockandhib='killall compton & i3lock -f -u -r 10 -s 5 & systemctl hibernate'
+
+alias socks='ssh -N -f cengsocks'
+alias nosocks='pkill ssh'

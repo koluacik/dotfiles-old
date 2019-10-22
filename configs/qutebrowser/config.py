@@ -134,16 +134,15 @@ c.fonts.web.family.cursive = None
 config.bind('<Ctrl-Shift-E>', 'edit-command',mode='command')
 config.bind(';l', 'hint links yank')
 config.bind(';:', 'hint images download')
-config.bind(',D', 'set downloads.location.directory /home/deniz/Documents/')
-config.bind(',ddo', 'set downloads.location.directory /home/deniz/Documents/Downloads')
-config.bind(',dD', 'set downloads.location.directory /home/deniz/Documents/Ders')
-config.bind(',dP', 'set downloads.location.directory /home/deniz/Documents/Pictures')
-config.bind(',dpm', 'set downloads.location.directory /home/deniz/Documents/Pictures/memes')
 config.bind('<Ctrl-Shift-D>', 'open qute://bookmarks')
 
 #proxy
 config.bind('\po', 'set content.proxy socks://localhost:9090')
 config.bind('\pp', 'set content.proxy system')
+config.bind('\ddf', 'spawn --user prompt_download.sh')
+config.bind('\ddd', 'spawn --user dmenu_download.sh')
+config.bind('\ddg', 'spawn --user dmenu_download_no_name.sh')
+
 
 c.content.headers.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
 
