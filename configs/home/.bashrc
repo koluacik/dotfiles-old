@@ -18,8 +18,8 @@ GPG_TTY=$(tty)
 export GPG_TTY
 export PATH=$PATH:/home/deniz/.local/bin
 
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-[ -f ~/.fzf.colors ] && source ~/.fzf.colors
+#BASE16_SHELL="$HOME/.config/base16-shell/"
+#[ -n "$PS1" ] && \
+#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#        eval "$("$BASE16_SHELL/profile_helper.sh")"
+#[ -f ~/.fzf.colors ] && source ~/.fzf.colors

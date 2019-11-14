@@ -1,4 +1,3 @@
-
 #!/usr/bin/bash
 #echo "open www.google.com" >> "$QUTE_FIFO"
 DDIR="$(find $HOME -type d | rofi -dmenu -location 2 -width 100 -line-margin 1 -line-padding 1)"

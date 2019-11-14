@@ -20,6 +20,7 @@ alias msl='/home/deniz/dotfiles/scripts/script_launcher.sh'
 #alias mcd='cd "$(find ~/* -type d | fzf --color -e)"'
 alias mping='ping archlinux.org'
 
+alias cal='cal -m'
 alias ls='ls --color=auto'
 alias vim='nvim'
 

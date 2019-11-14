@@ -58,6 +58,7 @@ noremap <leader>yy :%y+<CR>
 "latex
 "\lb to build a latex file. (uses CoC and its tex extension)
 noremap <leader>ll :CocCommand latex.Build <CR>
+noremap <leader>lwl :w <bar> :CocCommand latex.Build <CR>
 "\lz to display the already built pdf file in zathura
 noremap <silent><leader>lz :! zathura %:r.pdf & <CR>
 
