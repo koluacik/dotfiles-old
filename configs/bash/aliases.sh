@@ -9,6 +9,8 @@ alias _cdc='cd ~/.config'
 alias _cdd='cd ~/dotfiles'
 alias _date='date +%Y-%m-%d'
 
+alias btw='sudo pacman -Syu'
+
 alias bton='echo -e "power on" | bluetoothctl'
 alias btjbl='echo -e "connect 04:FE:A1:22:95:97" | bluetoothctl'
 alias btjbloff='echo -e "disconnect" | bluetoothctl'
