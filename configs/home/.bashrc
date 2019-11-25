@@ -8,8 +8,14 @@
 export PS1="\[\033[38;5;11m\]\u\\[\033[38;5;15m\] \W\\[\033[38;5;11m\] \\$\[$(tput sgr0)\] "
 export PS2="\033[38;5;11m> \033[00m\]"
 
-source ~/.bash/fzfcd.sh
-source ~/.bash/aliases.sh
+for file in ~/.bash/*.sh
+do
+	source $file
+done
+
+#source ~/.bash/fzfcd.sh
+#source ~/.bash/aliases.sh
+#source ~/.bash/*.sh
 
 export VISUAL=nvim
 export EDITOR=nvim
