@@ -13,6 +13,7 @@ alias btw='sudo pacman -Syu'
 
 alias bton='echo -e "power on" | bluetoothctl'
 alias btjbl='echo -e "connect 04:FE:A1:22:95:97" | bluetoothctl'
+alias btkz='echo -e "connect 00:13:EF:A0:04:49" | bluetoothctl'
 alias btjbloff='echo -e "disconnect" | bluetoothctl'
 alias btoff='echo -e "power off" | bluetoothctl'
 
