@@ -5,6 +5,6 @@ function mygcp()
 	git commit -a -m "$*"
 	if [[ $(git config --local -l | grep "remote") ]]
 	then
-		git push
+		git push -u origin master
 	fi
 }
