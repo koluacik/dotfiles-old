@@ -9,7 +9,7 @@
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
 # Type: Dict
-c.editor.command = ["urxvt","-e","vim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
+c.editor.command = ["urxvt","-e","nvim", "-f", "{file}", "-c", "normal {line}G{column0}l"]
 c.aliases = {
         'w'     : 'session-save',
         'q'     : 'quit',
