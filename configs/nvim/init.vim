@@ -63,13 +63,25 @@ noremap <leader>lwl :w <bar> :CocCommand latex.Build <CR>
 noremap <silent><leader>lz :! zathura %:r.pdf & <CR>
 
 "no highlighting
-noremap <silent><leader>] :noh <CR>
+"
+"noremap <silent><leader>] :noh <CR> 
+"use the below line instead of the above command
+nnoremap <silent><Esc> :noh <CR>
 
 "ctrl \ ctrl n is a hassle
 tnoremap <Esc> <C-\><C-n>
 
 ":e $MYVIMRC is a hassle
 command Evimrc edit $MYVIMRC
+
+"saner searches
+set ignorecase
+set smartcase
+
+"tab widths
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 
 "that's all folks!
