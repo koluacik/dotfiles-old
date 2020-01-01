@@ -133,8 +133,7 @@ c.fonts.web.family.cursive = None
 
 ##bindings
 config.bind('<Ctrl-Shift-E>', 'edit-command',mode='command')
-config.bind(';l', 'hint links yank')
-config.bind(';:', 'hint images download')
+config.bind(';;y', 'hint all spawn --user watch.sh')
 config.bind('<Ctrl-Shift-D>', 'open qute://bookmarks')
 
 #proxy
