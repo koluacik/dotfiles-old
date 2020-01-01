@@ -96,6 +96,7 @@ c.url.searchengines = {
         'abb' : 'https://www.abbreviations.com/{}',
         'enwd': 'https://en.wiktionary.org/wiki/{}',
         'trwd': 'https://tr.wiktionary.org/wiki/{}',
+        'imdb': 'https://www.imdb.com/find?q={}',
         }
 
 # Font used for the debugging console.
