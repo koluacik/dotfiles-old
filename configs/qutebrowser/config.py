@@ -142,6 +142,7 @@ config.bind('\pp', 'set content.proxy system')
 config.bind('\ddf', 'spawn --user prompt_download.sh')
 config.bind('\ddd', 'spawn --user dmenu_download.sh')
 config.bind('\ddg', 'spawn --user dmenu_download_no_name.sh')
+config.bind('\y', 'spawn --user watch.sh')
 
 
 c.content.headers.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
