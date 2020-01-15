@@ -298,7 +298,7 @@ bindsym $mod+p exec pavucontrol &
 #Xorg touchpad and keyboard layout configs
 exec_always /home/deniz/Documents/miscconfs/xstuff/touchpad.sh &
 exec_always /home/deniz/Documents/miscconfs/xstuff/layout.sh &
-bindcode 105 exec /home/deniz/Documents/miscconfs/xstuff/caps_lock.sh
+#bindcode 105 exec /home/deniz/Documents/miscconfs/xstuff/caps_lock.sh
 
 #lock screen
 bindsym $mod+Control+l exec killall compton & i3lock -f -u -r 10 -s 5 &
