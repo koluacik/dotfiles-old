@@ -22,7 +22,8 @@ hide_edge_borders smart
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:liberation sans 13
+#font pango:terminus 11
+font pango:Iosevka SS08 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -39,17 +40,11 @@ font pango:liberation sans 13
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal &
+#bindsym $mod+Return exec alacritty &
+bindsym $mod+Return exec WINIT_HIDPI_FACTOR=1.0 alacritty &
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run &
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+$left focus left
@@ -85,8 +80,6 @@ bindsym $mod+b split h
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -166,33 +159,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'" &
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-
-#bindsym $mod+r mode "resize"
-#keys above the hjkl are used for resizing
+#keys above hjkl are used for resizing
 bindsym $mod+y resize shrink width 10 px or 10 ppt
 bindsym $mod+u resize shrink height 10 px or 10 ppt
 bindsym $mod+i resize grow height 10 px or 10 ppt
@@ -253,8 +220,8 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 # PROTIP: You can also dynamically set dmenu's colors this way:
 #bindsym $mod+d exec dmenu_run -b -nb "$co4" -nf "$co0" -sb "$co7" -sf "$co0" -fn "liberation sans:pixelsize=15"
-bindsym $mod+d exec rofi -show run -location 2 -width 100 -lines 5 -line-margin 1 -line-padding 1 -font "liberation sans:pixelsize 12" -yoffset 27 &
-bindsym $mod+Shift+d exec cat /home/deniz/dotfiles/scripts/tmux.txt | rofi -dmenu -location 2 -width 100 -lines 43 -line-margin 1 -line-padding 1 -font "liberation sans:pixelsize 12" -yoffset 27 &
+bindsym $mod+d exec rofi -show run -location 2 -width 100 -lines 5 -line-margin 1 -line-padding 1 -font "Iosevka SS08 11" -yoffset 27 &
+bindsym $mod+Shift+d exec cat /home/deniz/dotfiles/scripts/tmux.txt | rofi -dmenu -location 2 -width 100 -lines 43 -line-margin 1 -line-padding 1 -font "Iosevka SS08 11" -yoffset 27 &
 bindsym $mod+Control+d exec networkmanager_dmenu &
 
 
@@ -262,30 +229,15 @@ bindsym $mod+Control+d exec networkmanager_dmenu &
 exec_always --no-startup-id .config/polybar/alternative_launch.sh &
 exec_always --no-startup-id killall compton &
 
-#compton
-bindsym $mod+z exec --no-startup-id killall compton &
-bindsym $mod+Shift+z exec --no-startup-id compton --config /home/deniz/Documents/miscconfs/compton.conf --vsync &
-bindsym $mod+Control+z exec --no-startup-id compton --config /home/deniz/Documents/miscconfs/compton-notrans.conf --vsync &
-
 #qutebrowser
 bindsym $mod+q exec --no-startup-id qutebrowser &
 
 #ranger 
-bindsym $mod+r exec urxvt -e ranger &
+bindsym $mod+r exec WINIT_HIDPI_FACTOR=1.0  alacritty -e ranger &
 
 #screenshot
 bindsym $mod+m exec ~/dotfiles/scripts/getshot.sh
 bindsym $mod+Shift+m exec ~/dotfiles/scripts/setshot.sh
-#screenshot copy to clipboard
-#bindsym $mod+Shift+m exec --no-startup-id maim -s | xclip -selection clipboard -t image/png &
-#bindsym $mod+m exec --no-startup-id maim | xclip -selection clipboard -t image/png &
-
-#screenshot write to a file
-#bindsym $mod+Shift+Ctrl+m exec maim -s ~/Documents/Pictures/screenshots/$(date +%s).png &
-#bindsym $mod+Ctrl+m exec maim ~/Documents/Pictures/screenshots/$(date +%s).png &
-
-#ncmpcpp
-bindsym $mod+n exec urxvt -e ncmpcpp &
 
 #chatting
 bindsym $mod+t exec --no-startup-id telegram-desktop &
@@ -298,7 +250,9 @@ bindsym $mod+p exec pavucontrol &
 #Xorg touchpad and keyboard layout configs
 exec_always /home/deniz/Documents/miscconfs/xstuff/touchpad.sh &
 exec_always /home/deniz/Documents/miscconfs/xstuff/layout.sh &
-#bindcode 105 exec /home/deniz/Documents/miscconfs/xstuff/caps_lock.sh
+#bindcode 108 exec xdotool key Multi_key 
+bindsym Alt_R exec /home/deniz/Documents/miscconfs/xstuff/Multi_key.sh
+bindcode 105 exec xdotool key Caps_Lock
 
 #lock screen
 bindsym $mod+Control+l exec killall compton & i3lock -f -u -r 10 -s 5 &

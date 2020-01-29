@@ -4,9 +4,9 @@ rofi="rofi -dmenu -location 2 -width 100 -line-margin 1 -line-padding 1 -yoffset
 area=("both screens" "left screen" "right screen" "select area" "active window")
 action=(save clipboard)
 
-s_area=$(for i in ${!area[*]}; do echo ${area[$i]}; done | $rofi -lines ${#area[*]} -font 'liberation sans:pixelsize 12')
+s_area=$(for i in ${!area[*]}; do echo ${area[$i]}; done | $rofi -lines ${#area[*]})
 
-s_action=$(for j in ${!action[*]}; do echo ${action[$j]}; done| $rofi -lines ${#action[*]} -font 'liberation sans:pixelsize 12')
+s_action=$(for j in ${!action[*]}; do echo ${action[$j]}; done| $rofi -lines ${#action[*]})
 case $s_area in
 	"both screens")
 		mycommand="maim"

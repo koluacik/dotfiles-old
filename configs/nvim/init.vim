@@ -41,6 +41,9 @@ set mouse=a
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chriskempson/base16-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "nobody wants a terminal with line numbers 
@@ -83,5 +86,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set termguicolors
+color base16-material-palenight
 
 "that's all folks!
