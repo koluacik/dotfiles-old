@@ -12,7 +12,7 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 set signcolumn=yes
 
 " Better display for messages
-set cmdheight=2
+set cmdheight=1
 "
 " " You will have bad experience for diagnostic messages when it's default
 " 4000.
@@ -25,7 +25,7 @@ set shortmess+=c
 set hidden
 
 "looks fancy
-set guicursor=
+"set guicursor=
 
 "saner splitting
 set splitbelow
@@ -87,6 +87,6 @@ set shiftwidth=4
 set expandtab
 
 set termguicolors
-color base16-material-palenight
+color base16-dracula
 
 "that's all folks!

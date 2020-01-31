@@ -19,7 +19,7 @@ alias btoff='echo -e "power off" | bluetoothctl'
 
 alias screenkeysstart='screenkey --show-settings'
 alias screenkeysstip='killall screenkey'
-alias msl='/home/deniz/dotfiles/scripts/script_launcher.sh'
+alias msl='/home/deniz/dotfiles/commands/script_launcher.sh'
 #alias mcd='cd "$(find ~/* -type d | fzf --color -e)"'
 alias mping='ping archlinux.org'
 

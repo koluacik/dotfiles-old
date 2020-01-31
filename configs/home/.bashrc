@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PS1="\[\033[38;5;11m\]\u\\[\033[38;5;15m\] \W\\[\033[38;5;11m\] \\$\[$(tput sgr0)\] "
+export PS1="\[\033[38;5;1m\]\u\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\W \[$(tput sgr0)\]\[\033[38;5;1m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 export PS2="\033[38;5;11m> \033[00m\]"
 
 for file in ~/.bash/*.sh

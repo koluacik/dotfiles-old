@@ -211,7 +211,7 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 
 #right now colors are 1
 # class                 border  backgr. text    ind	 child_border
-client.focused          $co3	$co3	$co3	$co3	$co8
+client.focused          $co3	$co3	$co3	$co2	$co8
 client.focused_inactive $co0	$co0	$co0	$co0	$co0
 client.unfocused        $co0	$co0	$co0	$co0	$co0
 client.urgent           $co1	$co1	$co1	$co1	$co1
@@ -236,8 +236,8 @@ bindsym $mod+q exec --no-startup-id qutebrowser &
 bindsym $mod+r exec WINIT_HIDPI_FACTOR=1.0  alacritty -e ranger &
 
 #screenshot
-bindsym $mod+m exec ~/dotfiles/scripts/getshot.sh
-bindsym $mod+Shift+m exec ~/dotfiles/scripts/setshot.sh
+bindsym $mod+m exec ~/dotfiles/commands/getshot.sh
+bindsym $mod+Shift+m exec ~/dotfiles/commands/setshot.sh
 
 #chatting
 bindsym $mod+t exec --no-startup-id telegram-desktop &
@@ -248,10 +248,8 @@ bindsym $mod+Control+t exec thunderbird &
 bindsym $mod+p exec pavucontrol &
 
 #Xorg touchpad and keyboard layout configs
-exec_always /home/deniz/Documents/miscconfs/xstuff/touchpad.sh &
-exec_always /home/deniz/Documents/miscconfs/xstuff/layout.sh &
-#bindcode 108 exec xdotool key Multi_key 
-bindsym Alt_R exec /home/deniz/Documents/miscconfs/xstuff/Multi_key.sh
+exec_always ~/dotfiles/commands/touchpad.sh&
+exec_always ~/dotfiles/commands/layout.sh &
 bindcode 105 exec xdotool key Caps_Lock
 
 #lock screen
