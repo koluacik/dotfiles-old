@@ -11,5 +11,5 @@ if type "xrandr"; then
     MONITOR=$m polybar --reload example &
   done
 else
-  polybar -q --reload example &
+  polybar -q --reload example
 fi

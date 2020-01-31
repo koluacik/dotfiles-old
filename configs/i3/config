@@ -229,20 +229,12 @@ bindsym $mod+Control+d exec networkmanager_dmenu &
 exec_always --no-startup-id .config/polybar/alternative_launch.sh &
 exec_always --no-startup-id killall compton &
 
-#qutebrowser
-bindsym $mod+q exec --no-startup-id qutebrowser &
-
 #ranger 
 bindsym $mod+r exec WINIT_HIDPI_FACTOR=1.0  alacritty -e ranger &
 
 #screenshot
 bindsym $mod+m exec ~/dotfiles/commands/getshot.sh
 bindsym $mod+Shift+m exec ~/dotfiles/commands/setshot.sh
-
-#chatting
-bindsym $mod+t exec --no-startup-id telegram-desktop &
-bindsym $mod+Shift+t exec --no-startup-id whatsapp-nativefier &
-bindsym $mod+Control+t exec thunderbird &
 
 #pavucontrol
 bindsym $mod+p exec pavucontrol &
