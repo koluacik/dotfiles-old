@@ -27,7 +27,7 @@ class Default(ColorScheme):
                 fg = default
             if context.media:
                 if context.image:
-                    fg = yellow
+                    fg = red
                 else:
                     fg = magenta
             if context.container:
