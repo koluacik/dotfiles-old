@@ -159,7 +159,7 @@ c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https:/
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
 # Type: Font
-c.fonts.monospace = '"Iosevka SS08", Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
+#c.fonts.monospace = '"Iosevka SS08", Monospace, "DejaVu Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Andale Mono", "Courier New", Courier, "Liberation Mono", monospace, Fixed, Consolas, Terminal'
 
 # Font used in the completion widget.
 # Type: Font
@@ -333,7 +333,7 @@ c.colors.hints.fg = base05
 c.colors.hints.bg = base00
 
 # Font color for the matched part of hints.
-c.colors.hints.match.fg = base0E
+c.colors.hints.match.fg = base08
 
 # Text color for the keyhint widget.
 c.colors.keyhint.fg = base0E

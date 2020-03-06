@@ -17,7 +17,7 @@ set $down j
 
 default_border pixel 2
 default_floating_border pixel 2
-hide_edge_borders smart 
+hide_edge_borders none 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -102,6 +102,7 @@ for_window [class="feh"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Blueman-manager"] set 600 300
 for_window [class="Nm-connection-editor"] floating enable
+for_window [class="DrRacket"] floating enable
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
