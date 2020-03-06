@@ -44,6 +44,10 @@ Plug 'chriskempson/base16-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+"Plug 'alx741/vim-hindent'
+"Plug 'nbouscal/vim-stylish-haskell'
 call plug#end()
 
 "nobody wants a terminal with line numbers 
@@ -64,6 +68,8 @@ noremap <leader>ll :CocCommand latex.Build <CR>
 noremap <leader>lwl :w <bar> :CocCommand latex.Build <CR>
 "\lz to display the already built pdf file in zathura
 noremap <silent><leader>lz :! zathura %:r.pdf & <CR>
+"\ Control 6 to change buffer using fzf
+nnoremap <silent><leader>b :FZF <CR>
 
 "no highlighting
 "
@@ -88,5 +94,8 @@ set expandtab
 
 set termguicolors
 color base16-dracula
+
+"hide mode popups (airline does show them already)
+set noshowmode
 
 "that's all folks!
