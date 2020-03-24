@@ -22,7 +22,11 @@ export EDITOR=nvim
 
 GPG_TTY=$(tty)
 export GPG_TTY
-export PATH=$PATH:/home/deniz/.local/bin
+export PATH=$PATH:/home/deniz/.local/bin:/home/deniz/.cabal/bin
+
+# for stack auto-complete
+eval "$(stack --bash-completion-script stack)"
+
 
 #BASE16_SHELL="$HOME/.config/base16-shell/"
 #[ -n "$PS1" ] && \
