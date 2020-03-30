@@ -154,7 +154,7 @@ c.tabs.tabs_are_windows = False
 # used by prepending the search engine name to the search term, e.g.
 # `:open google qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'yd': 'https://duckduckgo.com/?q={}&iar=videos&iax=videos&ia=videos', '4': 'https://4chan.org/{}', '8': 'https://8ch.net/{}', 'enwk': 'https://en.wikipedia.org/?search={}', 'trwk': 'https://tr.wikipedia.org/?search={}', 'aur': 'https://aur.archlinux.org/packages/?O=0&K={}', 'img': 'https://duckduckgo.com/?q={}&iar=images&iax=images&ia=images', 'reddt': 'https://www.reddit.com/r/{}', 'yemekad': 'http://kafeterya.metu.edu.tr/tarih/{}', 'aps': 'https://www.archlinux.org/packages/?q={}', 'dict': 'https://www.dictionary.com/browse/{}', 'thes': 'https://www.thesaurus.com/browse/{}', 'abb': 'https://www.abbreviations.com/{}', 'enwd': 'https://en.wiktionary.org/wiki/{}', 'trwd': 'https://tr.wiktionary.org/wiki/{}', 'imdb': 'https://www.imdb.com/find?q={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'enwk': 'https://en.wikipedia.org/?search={}', 'trwk': 'https://tr.wikipedia.org/?search={}', 'aur': 'https://aur.archlinux.org/packages/?O=0&K={}', 'img': 'https://duckduckgo.com/?q={}&iar=images&iax=images&ia=images',  'dict': 'https://www.dictionary.com/browse/{}', 'thes': 'https://www.thesaurus.com/browse/{}',  'enwd': 'https://en.wiktionary.org/wiki/{}', 'trwd': 'https://tr.wiktionary.org/wiki/{}', 'imdb': 'https://www.imdb.com/find?q={}'}
 
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
@@ -214,14 +214,12 @@ c.fonts.tabs = '10pt Iosevka SS08'
 c.fonts.web.family.cursive = None
 
 # Bindings for normal mode
-config.bind(';;y', 'hint all spawn --user watch.sh')
 config.bind('<Ctrl+Shift+d>', 'open qute://bookmarks')
 config.bind('\\ddd', 'spawn --user dmenu_download.sh')
 config.bind('\\ddf', 'spawn --user prompt_download.sh')
 config.bind('\\ddg', 'spawn --user dmenu_download_no_name.sh')
 config.bind('\\po', 'set content.proxy socks://localhost:9090')
 config.bind('\\pp', 'set content.proxy system')
-config.bind('\\y', 'spawn --user watch.sh')
 
 # Bindings for command mode
 config.bind('<Ctrl+Shift+e>', 'edit-command', mode='command')

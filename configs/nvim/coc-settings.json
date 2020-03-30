@@ -1,5 +1,4 @@
 {
-    "python.jediEnabled": false,
 	"languageserver":{
 		"ccls": {
 			"command": "ccls",
@@ -16,7 +15,26 @@
 			"args": ["start"],
 			"filetypes": ["sh"],
 			"ignoredRootPaths": ["~"]
-		}
-	}
+		},
+        "haskell": {
+            "command": "/home/deniz/.local/bin/hie-wrapper",
+            "args": ["--lsp"],
+            "rootPatterns": [
+                "*.cabal",
+                "stack.yaml",
+                "cabal.config",
+                "package.yaml"
+            ],
+            "filetypes": [
+                "hs",
+                "lhs",
+                "haskell"
+            ],
+            "initializationOptions": {
+                "languageServerHaskell": {
+                }
+            }
+        }
+    }
 }
 
