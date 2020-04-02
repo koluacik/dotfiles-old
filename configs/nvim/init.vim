@@ -78,7 +78,7 @@ nnoremap <silent><leader>b :FZF <CR>
 nnoremap <silent><Esc> :noh <CR>
 
 "ctrl \ ctrl n is a hassle
-tnoremap <Esc> <C-\><C-n>
+tnoremap <M-q> <C-\><C-n>
 
 ":e $MYVIMRC is a hassle
 command Evimrc edit $MYVIMRC
