@@ -17,11 +17,11 @@
 			"ignoredRootPaths": ["~"]
 		},
         "haskell": {
-            "command": "/home/deniz/.local/bin/hie-wrapper",
+            "command": "ghcide",
             "args": ["--lsp"],
             "rootPatterns": [
                 "*.cabal",
-                "stack.yaml",
+                ".stack.yaml",
                 "cabal.config",
                 "package.yaml"
             ],
@@ -29,11 +29,7 @@
                 "hs",
                 "lhs",
                 "haskell"
-            ],
-            "initializationOptions": {
-                "languageServerHaskell": {
-                }
-            }
+            ]
         }
     }
 }
