@@ -19,6 +19,8 @@ done
 
 export VISUAL=nvim
 export EDITOR=nvim
+export BROWSER=qutebrowser
+export WINIT_X11_SCALE_FACTOR=1.0
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -30,9 +32,12 @@ eval "$(stack --bash-completion-script stack)"
 
 set -o vi
 
+#avoid nested rangers
+ranger() {
+    if [ -z "$RANGER_LEVEL" ]; then
+        /usr/bin/ranger "$@"
+    else 
+        exit
+    fi
+}
 
-#BASE16_SHELL="$HOME/.config/base16-shell/"
-#[ -n "$PS1" ] && \
-#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#        eval "$("$BASE16_SHELL/profile_helper.sh")"
-#[ -f ~/.fzf.colors ] && source ~/.fzf.colors
